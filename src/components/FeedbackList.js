@@ -4,7 +4,7 @@ import { getFeedbacks } from '../actions/feedbackActions';
 
 const FeedbackList = () => {
   const dispatch = useDispatch();
-  const feedbacks = useSelector((state) => state.feedbacks);
+  const feedbacks = useSelector((state) => state.feedbacks ?? []);
 
   useEffect(() => {
     dispatch(getFeedbacks());
@@ -23,6 +23,7 @@ const FeedbackList = () => {
 };
 
 export default FeedbackList;
+
 
 
 // import React from 'react';
